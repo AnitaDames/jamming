@@ -60,7 +60,7 @@ class App extends React.Component {
 
     this.addTrack = this.addTrack.bind(this);
   }
-
+  // I used song instead of track
   addTrack(track) {
     let songs = this.state.playlistTracks;
     if (songs.find((savedSongs) => savedSongs.id === track.id)) {
@@ -70,6 +70,14 @@ class App extends React.Component {
     this.setState({
       playlistSongs: songs,
     });
+  }
+
+  removeTrack(track) {
+    let songs = this.state.playlistTracks;
+    songs = songs.filter(currentSong => currentSong.id !==track.id);
+    this.setState({
+      playlistTracks: songs
+    })
   }
 
   render() {
