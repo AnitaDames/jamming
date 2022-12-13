@@ -60,7 +60,8 @@ class App extends React.Component {
 
     this.addTrack = this.addTrack.bind(this);
     this.removeTrack = this.removeTrack.bind(this);
-
+    this.updatePlaylistName = this.updatePlaylistName.bind(this);
+    this.savePlaylist = this.savePlaylist.bind(this);
   }
   // I used song instead of track
   addTrack(track) {
@@ -76,10 +77,22 @@ class App extends React.Component {
 
   removeTrack(track) {
     let songs = this.state.playlistTracks;
-    songs = songs.filter(currentSong => currentSong.id !==track.id);
+    songs = songs.filter((currentSong) => currentSong.id !== track.id);
     this.setState({
-      playlistTracks: songs
-    })
+      playlistTracks: songs,
+    });
+  }
+
+  updatePlaylistName(name) {
+    // let songs = this.state.playlistName;
+    this.setState({
+      playlistName: name,
+    });
+  }
+
+  savePlaylist() {
+    // alert("this method is linked to the button currently" to test code)
+    const trackUris = this.state.playlistTracks.map(track => track.uri);
   }
 
   render() {
@@ -98,7 +111,10 @@ class App extends React.Component {
             <Playlist
               playlistName={this.state.playlistName}
               playlistTracks={this.state.playlistTracks}
-              onRemove={this.removeTrack} />
+              onRemove={this.removeTrack}
+              onNameChange={this.updatePlaylistName}
+              onSave={this.savePlaylist}
+            />
           </div>
         </div>
       </div>
@@ -107,3 +123,5 @@ class App extends React.Component {
 }
 
 export default App;
+
+// onChange={this.handleNameChange}
