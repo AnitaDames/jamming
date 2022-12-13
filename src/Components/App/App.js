@@ -59,6 +59,8 @@ class App extends React.Component {
     };
 
     this.addTrack = this.addTrack.bind(this);
+    this.removeTrack = this.removeTrack.bind(this);
+
   }
   // I used song instead of track
   addTrack(track) {
