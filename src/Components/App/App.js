@@ -62,6 +62,7 @@ class App extends React.Component {
     this.removeTrack = this.removeTrack.bind(this);
     this.updatePlaylistName = this.updatePlaylistName.bind(this);
     this.savePlaylist = this.savePlaylist.bind(this);
+    this.search = this.search.bind(this);
   }
   // I used song instead of track
   addTrack(track) {
@@ -92,7 +93,11 @@ class App extends React.Component {
 
   savePlaylist() {
     // alert("this method is linked to the button currently" to test code)
-    const trackUris = this.state.playlistTracks.map(track => track.uri);
+    const trackUris = this.state.playlistTracks.map((track) => track.uri);
+  }
+
+  search(term) {
+    console.log("term");
   }
 
   render() {
@@ -102,7 +107,7 @@ class App extends React.Component {
           Ja<span className="highlight">mmm</span>ing
         </h1>
         <div className="App">
-          <SearchBar />
+          <SearchBar onSearch={this.search} />
           <div className="App-playlist">
             <SearchResults
               searchResults={this.state.searchResults}
