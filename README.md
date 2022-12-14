@@ -1,3 +1,13 @@
+Welcome! 
+
+# jamming 
+
+## What does this project do?
+> I am Anita, a student at Codecademy. This project is for an assignment. The project was developed for students to create Spotify API to build a website that allows users to search the Spotify library, create a custom playlist, then save it to their Spotify account. This  showcase projects they have built on the Full-Stack Engineer Path in the font-end section of the course.
+
+## The Aim
+To create a Playlist App With the Spotify API
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
