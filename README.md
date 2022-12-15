@@ -2,6 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Update Spotify API Key
+Go to Spotify.js, and on line 2, assign your own spotify API key to the clientId varable
+
 ## Available Scripts
 
 In the project directory, you can run:
