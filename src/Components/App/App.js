@@ -4,6 +4,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import SearchResults from "../SearchResults/SearchResults";
 import Playlist from "../Playlist/Playlist";
 
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -97,7 +98,7 @@ class App extends React.Component {
   }
 
   search(term) {
-    console.log("term");
+   console.log(term);
   }
 
   render() {
@@ -129,4 +130,3 @@ class App extends React.Component {
 
 export default App;
 
-// onChange={this.handleNameChange}
